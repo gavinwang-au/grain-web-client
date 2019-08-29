@@ -9,7 +9,7 @@ function buildI18n (language, ...localesJson) {
   switch (language) {
     case 'en':
       result = _merge(
-        require(`./en`),
+        require(`./ru`),
         require(`./en.terms`),
         require(`./en.pre-issuance-guide`),
         ...localesJson
