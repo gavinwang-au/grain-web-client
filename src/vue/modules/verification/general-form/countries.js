@@ -1,4 +1,4 @@
-import translations from '@/i18n/en.countries'
+import translations from '@/i18n/ru.countries'
 
 import { byAlpha2 } from 'iso-country-codes'
 
