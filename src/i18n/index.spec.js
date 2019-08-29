@@ -66,12 +66,13 @@ const mockEn = {
 const webpackInjector = require('inject-loader!babel-loader!./index.js')
 const { i18nOptions } = webpackInjector({
   './en': mockEn,
+  './ru': mockEn,
 })
 
 describe('the i18n is properly configured', () => {
   beforeEach(() => {
     const options = _cloneDeep(i18nOptions)
-    options.lng = 'en'
+    options.lng = 'ru'
     options.debug = false // Set to true, if something is not working
     moment.tz.setDefault('UTC') // Set timezone to 'UTC', so tests won't convert to local timezone
     i18next.init(options)

@@ -1350,6 +1350,7 @@
       "request-state-header": "Статус",
       "created-header": "Создано",
       "review-btn": "Рассмотреть",
+      "no-history-title": "No request history",
       "no-history-desc": "Здесь будет список ваших запросов на вывод активов",
       "request-id": "Идентификатор запроса",
       "created": "Создано",

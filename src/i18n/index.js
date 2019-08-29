@@ -9,6 +9,14 @@ function buildI18n (language, ...localesJson) {
   switch (language) {
     case 'en':
       result = _merge(
+        require(`./en`),
+        require(`./en.terms`),
+        require(`./en.pre-issuance-guide`),
+        ...localesJson
+      )
+      break
+    case 'ru':
+      result = _merge(
         require(`./ru`),
         require(`./en.terms`),
         require(`./en.pre-issuance-guide`),
@@ -32,8 +40,13 @@ function buildI18nOptions (language, i18n) {
           ...i18n.translations,
         },
       },
+      ru: {
+        translation: {
+          ...i18n.translations,
+        },
+      },
     },
-    whitelist: ['en'],
+    whitelist: ['en', 'ru'],
     // set to true if you need en-US/en-UK lng's:
     nonExplicitWhitelist: false,
     interpolation: {
@@ -90,7 +103,7 @@ function buildI18nOptions (language, i18n) {
   }
 }
 
-const lang = 'en'
+const lang = 'ru'
 export const i18nOptions = buildI18nOptions(
   lang,
   buildI18n(lang)
