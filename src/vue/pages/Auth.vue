@@ -68,8 +68,10 @@ export default {
 }
 
 .auth__titles {
-  background-image: url('../../../static/Kernel_bg_2.png');
-  background-repeat: round;
+  background-color: $_cornflowerBlue;
+  background-image: url('../../../static/grain_chain_page.png');
+  background-position: center;
+  background-repeat: repeat-x;
   display: flex;
   flex-direction: column;
   justify-content: center;
