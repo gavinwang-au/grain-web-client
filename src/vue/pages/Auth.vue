@@ -10,11 +10,11 @@
         v-html="$options.filters.globalize('auth-pages.big-title', { escapeValue: false })"
       />
       <!-- eslint-enable -->
-      <template v-if="buildVersion">
+      <!-- <template v-if="buildVersion">
         <p class="auth__version">
           {{ buildVersion }}
         </p>
-      </template>
+      </template> -->
     </div>
     <div class="auth__form">
       <logo class="auth__logo" />
@@ -23,11 +23,15 @@
         <idle-message />
       </div>
 
-      <router-view />
+      <div class="auth__form-wrapper">
+        <centered-form>
+          <router-view />
+        </centered-form>
+      </div>
 
-      <section class="auth__footer-section">
+      <!-- <section class="auth__footer-section">
         <app-footer />
-      </section>
+      </section> -->
     </div>
   </div>
 </template>
@@ -35,7 +39,8 @@
 <script>
 import Logo from '../assets/Logo'
 import IdleMessage from '@/vue/common/IdleMessage'
-import AppFooter from '@/vue/navigation/Footer'
+// import AppFooter from '@/vue/navigation/Footer'
+import CenteredForm from '@/vue/common/CenteredForm'
 import config from '@/config'
 
 export default {
@@ -43,7 +48,8 @@ export default {
   components: {
     Logo,
     IdleMessage,
-    AppFooter,
+    // AppFooter,
+    CenteredForm,
   },
   data () {
     return {
@@ -106,7 +112,7 @@ export default {
 }
 
 .auth__form {
-  padding: 8rem 11rem;
+  padding: 3rem 4rem;
   position: relative;
 
   @include respond-to(large) {
@@ -116,6 +122,18 @@ export default {
     margin: 0 auto;
     max-width: 48rem;
     padding: 6rem 1.6rem;
+    width: 100%;
+  }
+}
+
+.auth__form-wrapper {
+  width: 50%;
+  margin: auto;
+
+  @include respond-to(large) {
+    width: 70%;
+  }
+  @include respond-to(medium) {
     width: 100%;
   }
 }
