@@ -26,20 +26,20 @@ $z-sidebar: 120;
 $z-tooltip-wrapper: 1;
 
 $_athensGray: #e9eaed;
-$_eastBay: #004811;
+$_eastBay: #C3601A;
 $_white: #ffffff;
 $_concrete: #f2f2f2;
-$_black: #000000;
+$_black: #3A4649;
 $_gray: #e2e3e3;
 $_silverChalice: #aeaeae;
-$_cyan: #14ba95;
+$_cyan: #DB6C1D;
 $_thinGray: #f2f2f4;
 $_thinBlue: #f6f8fb;
 $_lightGray: #c6c6c6;
 $_mediumGray: #cccccc;
 $_lightRed: #ef5350;
 $_darkRed: #d6244a;
-$_cornflowerBlue: #81b044;
+$_cornflowerBlue: #F47921;
 $_deepBlue: #291e93;
 $_green: #33a494;
 $_lightGreen: #51ca90;
@@ -54,7 +54,7 @@ $_silverChalice: #aaaaaa;
 $_aliceBlue: #f5f6ff;
 
 // base colors:
-$col-primary: $_eastBay;
+$col-primary: $_black;
 $col-secondary: $_lightPurple;
 $col-primary-lighten: $_cornflowerBlue;
 $col-primary-txt: $_white;
@@ -75,7 +75,7 @@ $col-info: $_cornflowerBlue;
 $col-danger: $_darkRed;
 
 // global colors
-$col-text: $_eastBay;
+$col-text: $_black;
 $col-text-secondary: $_lightPurple;
 $col-link: $_cornflowerBlue;
 $col-border: $_ghostWhite;
@@ -187,7 +187,7 @@ $col-document-manager-border: $_silverChalice;
 
 // loader colors:
 $col-loader-text: $col-primary;
-$col-loader-icon: $col-primary-inactive;
+$col-loader-icon: $_cornflowerBlue;
 
 // details colors:
 $col-details-label: $col-primary-inactive;
