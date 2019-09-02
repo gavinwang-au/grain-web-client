@@ -45,7 +45,7 @@ $x-large: 1920px;
 @mixin button-raised () {
   @include button();
 
-  border-radius: 0.2rem;
+  border-radius: 10rem;
   background-color: $col-button-raised;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
   color: $col-button-raised-txt;
