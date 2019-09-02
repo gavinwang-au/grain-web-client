@@ -6,6 +6,9 @@
   width: 80%;
   max-width: 320px;
 }
+.app__init-logo img {
+  width: 100%;
+}
 @keyframes app__init-blink {
   0% { opacity: 0; }
   50% { opacity: 1; }
