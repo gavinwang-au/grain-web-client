@@ -59,7 +59,7 @@
             v-ripple
             class="app__button-raised movements-top-bar__actions-btn"
             @click="isTransferDrawerShown = true"
-            :disabled="!asset.isTransferable"
+            :disabled="!asset.isTransferable || isAccountUnverified"
             :title="getMessageIdForPolicy(ASSET_POLICIES_STR.isTransferable) |
               globalize({ asset: asset.code })
             "
@@ -163,6 +163,7 @@ export default {
   computed: {
     ...mapGetters({
       balancesAssets: vuexTypes.balancesAssets,
+      isAccountUnverified: vuexTypes.isAccountUnverified,
     }),
     assets () {
       return this.balancesAssets.filter(item => !item.isGrainCoin)

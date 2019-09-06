@@ -28,6 +28,7 @@
           <button
             v-ripple
             class="app__button-raised"
+            :disabled="isAccountUnverified"
             @click="isCreateBuyOfferDrawerShown = true"
           >
             {{ 'trade-top-bar.create-buy-offer-button' | globalize }}
@@ -35,6 +36,7 @@
           <button
             v-ripple
             class="app__button-raised"
+            :disabled="isAccountUnverified"
             @click="isCreateSellOfferDrawerShown = true"
           >
             {{ 'trade-top-bar.create-sell-offer-button' | globalize }}
@@ -153,6 +155,7 @@ export default {
   computed: {
     ...mapGetters([
       vuexTypes.accountBalances,
+      vuexTypes.isAccountUnverified,
     ]),
     assetPairBalances () {
       return {
