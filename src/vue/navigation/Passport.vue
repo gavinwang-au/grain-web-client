@@ -109,6 +109,7 @@ export default {
     ...mapGetters({
       email: vuexTypes.walletEmail,
       kycAvatarKey: vuexTypes.kycAvatarKey,
+      kycLatestRequestData: vuexTypes.kycLatestRequestData,
 
       isAccountUnverified: vuexTypes.isAccountUnverified,
       isAccountUsAccredited: vuexTypes.isAccountUsAccredited,
@@ -120,6 +121,7 @@ export default {
     }),
     accountRoleTranslationId () {
       if (this.isAccountGeneral) {
+        if (this.kycLatestRequestData.is_fund) return 'passport.account-fund'
         return 'passport.account-general'
       } else if (this.isAccountCorporate) {
         return 'passport.account-corporate'
